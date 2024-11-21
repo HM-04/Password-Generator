@@ -35,3 +35,10 @@ def password_generator(min_length, special_characters="True", numbers="True"):
             correct_requirements += correct_requirements + special_present
         
     return password
+
+
+min_length  = int(input("Please enter a minumum length for your password: "))
+number_present = input("Will your password have numbers? (y/n) ").lower() == "y"
+special_present = input("Will your password have special characters? (y/n) ").lower() == "y"
+password = password_generator(20, number_present, special_present)
+print(password)
